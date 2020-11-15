@@ -20,7 +20,7 @@ const imageApiService = new ImageApiService();
 refs.searchForm.addEventListener('submit', onSearch);
 loadMoreButton.refs.button.addEventListener('click', fetchImages);
 
-refs.galleryContainer.addEventListener('click', onOpenModal);
+
 
 function onSearch (e) {
     e.preventDefault();
