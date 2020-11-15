@@ -41,6 +41,10 @@ function fetchImages() {
     loadMoreButton.disable();
     imageApiService.asyncFetchImages().then(hits => {
         appendImagesMarkup(hits);
+        //console.log(hits.length);
+        if (hits.length != 12) {
+            loadMoreButton.hide();
+        }
         loadMoreButton.enable();
         window.scrollTo({
             top: refs.galleryContainer.offsetHeight,
