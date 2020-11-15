@@ -19,8 +19,6 @@ export default class ImagesApiService{
         const response = await fetch(url);
         const newHits = await response.json();
             
-        // throw new Error('qweqwe'); // для проверки ошибки
-
         this.incremenetPage();
         return newHits.hits;
         } catch (error) {

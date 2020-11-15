@@ -1,9 +1,8 @@
 import "./css/common.css";
 import 'core-js';
 import ImageApiService from './js/apiService';
-import imagesTpl from './templates/images.hbs';
+import cardTemplate from './templates/cards.hbs';
 import LoadMoreButton from './js/load-more-btn';
-import { onOpenModal } from './js/modal';
 import { info } from "@pnotify/core";
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
@@ -28,7 +27,6 @@ function onSearch (e) {
 
     imageApiService.query = e.currentTarget.elements.query.value;
     
-    // проверка на пустую строку
     if (imageApiService.query === '') {
         return emptyStringAlert();
     }
@@ -53,7 +51,7 @@ function fetchImages() {
 }
 
 function appendImagesMarkup (hits) {
-    refs.galleryContainer.insertAdjacentHTML('beforeend', imagesTpl(hits));
+    refs.galleryContainer.insertAdjacentHTML('beforeend', cardTemplate(hits));
 }
 
 function clearGalleryContainer () {
