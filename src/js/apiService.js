@@ -2,7 +2,7 @@ import { error } from "@pnotify/core";
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 
-const API_KEY = '18993455-a304b75c58fb6c345b4521260';
+const API_KEY = '19118042-225fc5a6ed81f1de06d7a127f';
 const BASE_URL = 'https://pixabay.com/api';
 
 export default class ImagesApiService{
