@@ -3,6 +3,7 @@ import 'core-js';
 import ImageApiService from './js/apiService';
 import cardTemplate from './templates/cards.hbs';
 import LoadMoreButton from './js/load-more-btn';
+import { onOpenModal } from './js/modal';
 import { info } from "@pnotify/core";
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
@@ -20,7 +21,7 @@ const imageApiService = new ImageApiService();
 refs.searchForm.addEventListener('submit', onSearch);
 loadMoreButton.refs.button.addEventListener('click', fetchImages);
 
-
+refs.galleryContainer.addEventListener('click', onOpenModal);
 
 function onSearch (e) {
     e.preventDefault();
